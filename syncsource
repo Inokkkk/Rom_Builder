@@ -4,29 +4,23 @@ cd $HOME
 
 # Configure Git
 git config --global color.ui true
-git config --global user.name ZunayedDihan
-git config --global user.email zunayeddihan@gmail.com
+git config --global user.name aseelps
+git config --global user.email aseelpsathar@gmail.com
 
 # Git Haxxx xD
 echo "${git_cookies}" > ~/git_hax.sh
 bash ~/git_hax.sh && rm ~/git_hax.sh
 
 # Repo init  and sync
-repo init -u git://github.com/DerpFest-11/manifest.git -b 11 --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
+repo init -q --no-repo-verify --depth=1 -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault
 
 # Start repo sync
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
 
 # Purge repo
 rm -rf .repo
 
-# Gapps
-rm -rf vendor/gms
-git clone --depth=1 https://gitlab.com/ZunayedDihan/vendor_gms -b 11-new vendor/gms
-rm -rf device/generic/opengl-transport
-
 # Pull Device Sources
-git clone https://github.com/ZunayedDihan/device_xiaomi_daisy_work -b wip-1 device/xiaomi/daisy
-git clone --depth=1 https://github.com/ZunayedDihan/vendor_xiaomi_daisy_work -b wip vendor/xiaomi/daisy
-git clone --depth=1 https://github.com/lupesoltec/vendor_MiuiCamera.git -b daisy vendor/MiuiCamera
-git clone --depth=1 https://github.com/acras01/android_kernel_xiaomi_daisy -b arrow-11.0 kernel/xiaomi/msm8953
+git clone https://github.com/aseelps/device_xiaomi_juice --single-branch -b test device/xiaomi/juice
+git clone https://github.com/aseelps/prebuilt-vendor_xiaomi_juice --single-branch -b dot11 vendor/xiaomi/juice
+git clone https://github.com/aseelps/android_kernel_xiaomi_juice  --single-branch -b 11.0 kernel/xiaomi/juice

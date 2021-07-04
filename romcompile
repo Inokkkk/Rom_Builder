@@ -2,20 +2,26 @@
 cd $HOME
 
 # Notify In telegram
-telegram -M "*DERPFEST ROM Compile Status*: \`STARTED!\`.
+telegram -M "*juice ROM Compile Status*: \`STARTED!\`.
 *Started at*:- \`$(date)\`."
 
 # Setup CCache
-ccache -M 10G
+ccache -M 20G
+ccache -o compression=true
 ccache -z
 
 # Run build process
 build_start=$(date +"%s")
 #
 #
-source build/envsetup.sh
-lunch derp_daisy-user
-mka derp -j8
+
+source build/envsetup.sh 
+lunch dot_juice-user
+export USE_CCACHE=1
+export CCACHE_EXEC=$(command -v ccache)
+export WITH_GAPPS=true 
+export DOT_OFFICIAL=true
+make bacon -j8
 #
 #
 build_end=$(date +"%s")

@@ -1,8 +1,7 @@
 
 env:
-  rclone_config: "ENCRYPTED[f32fbe4066f26d01e38009fa73b03f7c4f315d7c18704f18d0475157a08f182b22bfa6982606602dcb716d05f3643fcb]"
-  git_cookies: "ENCRYPTED[dde6f359e45f8b9b14fa8a75dbac08fdd3191de61cfbfa06a6897a9a3ebb3872c6582e663d93ca2a8149432a53ec3fb0]"
-  tg_auth: "ENCRYPTED[f76c54673a122a8997df213479ee335d71f1d3c394385e3261cf8211a99e8075e53ebf4fa4f3e47cd10609e561e9aefb]"
+  rclone_config: "ENCRYPTED[768296cdefc06f2c37824cfaca301b3b49d427951ef23d60f7f4ec07486126edd7d86036d4d71af683f49c8056730b7c]"
+  tg_auth: "ENCRYPTED[91a6c707d2655d53b743439624ee2c059afac0e3a951d0f85b30c654f384e97f84b03719e03a59fd3b7cab23c92acbbb]"
 
 container:
   image: fr3akyphantom/droid-builder
@@ -10,7 +9,7 @@ container:
   memory: 32G
 
 task:
-    name: Hyouka Builder
+    name: dot_juice
     timeout_in: 120m
     ccachesync_background_script:
       - ./ccachesync
