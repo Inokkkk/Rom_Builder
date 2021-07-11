@@ -2,8 +2,8 @@
 #
 cd $HOME
 build_time=$(cat ~/.build_time)
-build_name=$(ls $HOME/out/target/product/juice/ | grep -m1 -E 'dotOS|.zip')
-ZIP=$(find $(pwd)/out/target/product/juice/ -maxdepth 1 -name "*dotOS*.zip" | perl -e 'print sort { length($b) <=> length($a) } <>' | head -n 1)
+build_name=$(ls $HOME/out/target/product/juice/ | grep -m1 -E 'Nusantara|.zip')
+ZIP=$(find $(pwd)/out/target/product/juice/ -maxdepth 1 -name "*Nusantara*.zip" | perl -e 'print sort { length($b) <=> length($a) } <>' | head -n 1)
 ZIPNAME=$(basename ${ZIP})
 ZIPSIZE=$(du -sh ${ZIP} |  awk '{print $1}')
 
@@ -11,8 +11,8 @@ ZIPSIZE=$(du -sh ${ZIP} |  awk '{print $1}')
 # Push Compiled ROM if available
 if [ -f $HOME/out/target/product/daisy/${build_name} ]; then
 
-rclone copy $HOME/out/target/product/juice/$build_name juice:dotOS/ -P
-rclone copy $HOME/out/target/product/juice/${ZIPNAME} juice:dotOS/ -P
+rclone copy $HOME/out/target/product/juice/$build_name juice:Nusantara/ -P
+rclone copy $HOME/out/target/product/juice/${ZIPNAME} juice:Nusanatara/ -P
 
 telegram -M "*juice Compile Status*: \`FINISHED!\`
 *Finished at*:- \`$(date)\`.
