@@ -1,7 +1,6 @@
 
 env:
-  rclone_config: "ENCRYPTED[768296cdefc06f2c37824cfaca301b3b49d427951ef23d60f7f4ec07486126edd7d86036d4d71af683f49c8056730b7c]"
-  tg_auth: "ENCRYPTED[91a6c707d2655d53b743439624ee2c059afac0e3a951d0f85b30c654f384e97f84b03719e03a59fd3b7cab23c92acbbb]"
+  rclone_config: "ENCRYPTED[ya29.a0ARrdaM8V0L07LAq2RIkXnSK9b2eVymxCMm35onvpBFruXAgkQdbDiTn-0xMIlrHewmIyV4sZrbgpIipkf9P3k-Nf5B5O1j_Fkx74EzxPzCDygF6JMgtKBSiBn5dct9kgpHGCcWWYJm9JQNHCeIO2OaaCaOyy]"
 
 container:
   image: fr3akyphantom/droid-builder
@@ -9,7 +8,7 @@ container:
   memory: 32G
 
 task:
-    name: dot_juice
+    name: nusanatara_juice
     timeout_in: 120m
     ccachesync_background_script:
       - ./ccachesync
