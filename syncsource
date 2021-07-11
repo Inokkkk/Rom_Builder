@@ -4,15 +4,15 @@ cd $HOME
 
 # Configure Git
 git config --global color.ui true
-git config --global user.name aseelps
-git config --global user.email aseelpsathar@gmail.com
+git config --global user.name I-n-o-k
+git config --global user.email inok.dr189@gmail.com
 
 # Git Haxxx xD
 echo "${git_cookies}" > ~/git_hax.sh
 bash ~/git_hax.sh && rm ~/git_hax.sh
 
 # Repo init  and sync
-repo init -q --no-repo-verify --depth=1 -u git://github.com/NusantaraProject-ROM/android_manifest -b -g default,-device,-mips,-darwin,-notdefault
+repo init -q --no-repo-verify --depth=1 -u https://github.com/NusantaraProject-ROM/android_manifest -b -g default,-device,-mips,-darwin,-notdefault
 
 # Start repo sync
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
