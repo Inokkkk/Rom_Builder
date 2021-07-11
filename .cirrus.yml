@@ -1,6 +1,6 @@
 
 env:
-  rclone_config: "ENCRYPTED[ya29.a0ARrdaM8V0L07LAq2RIkXnSK9b2eVymxCMm35onvpBFruXAgkQdbDiTn-0xMIlrHewmIyV4sZrbgpIipkf9P3k-Nf5B5O1j_Fkx74EzxPzCDygF6JMgtKBSiBn5dct9kgpHGCcWWYJm9JQNHCeIO2OaaCaOyy]"
+  rclone_config: "ya29.a0ARrdaM8V0L07LAq2RIkXnSK9b2eVymxCMm35onvpBFruXAgkQdbDiTn-0xMIlrHewmIyV4sZrbgpIipkf9P3k-Nf5B5O1j_Fkx74EzxPzCDygF6JMgtKBSiBn5dct9kgpHGCcWWYJm9JQNHCeIO2OaaCaOyy"
 
 container:
   image: fr3akyphantom/droid-builder
