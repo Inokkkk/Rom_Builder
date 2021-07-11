@@ -12,7 +12,7 @@ echo "${git_cookies}" > ~/git_hax.sh
 bash ~/git_hax.sh && rm ~/git_hax.sh
 
 # Repo init  and sync
-repo init -q --no-repo-verify --depth=1 -u repo init -u https://github.com/NusantaraProject-ROM/android_manifest -b -g default,-device,-mips,-darwin,-notdefault
+repo init -q --no-repo-verify --depth=1 -u git://github.com/NusantaraProject-ROM/android_manifest -b -g default,-device,-mips,-darwin,-notdefault
 
 # Start repo sync
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
